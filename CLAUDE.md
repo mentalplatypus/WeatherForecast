@@ -2,6 +2,8 @@
 
 A lightweight weather app: search any place on Earth and see current conditions, the next 24 hours and a 5-day forecast. Uses the Dusk theme shared with the home page (see its CLAUDE.md): a soft gradient background, translucent rounded cards, Bricolage Grotesque headings and Inter text, in light and dark. Graph paper is reserved for Paper Arcade.
 
+Has the site-wide light/dark switch (top right; see the home page CLAUDE.md). The chart and icons use CSS variables, so they follow the theme without redrawing.
+
 - Repository: https://github.com/mentalplatypus/WeatherForecast (public, branch `main`)
 - Live site: https://mentalplatypus.github.io/WeatherForecast/ (GitHub Pages redeploys on every push to `main`)
 - Listed under "Ongoing projects" on the home page (`mentalplatypus/mentalplatypus.github.io`, branch `master`). Started 2026-10-27. Move it to Finished projects when David says it's done.
