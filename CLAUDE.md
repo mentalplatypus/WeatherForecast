@@ -25,7 +25,7 @@ Everything is in `index.html`: no build step, no API keys, no server. All servic
 
 ## Testing locally
 
-Node and Python aren't installed on this machine; use a temporary portable Node in the scratchpad to serve the folder over http. Check light and dark mode, about 375px width (no sideways scroll), and a few kinds of search: a city, "City, Region", a UK postcode, a landmark, an address, decimal and DMS coordinates, and a nonsense string.
+Node.js is installed (`C:/Program Files/nodejs`, since 2026-10-31; Python isn't). Use it to serve the folder over http. Check light and dark mode, about 375px width (no sideways scroll), and a few kinds of search: a city, "City, Region", a UK postcode, a landmark, an address, decimal and DMS coordinates, and a nonsense string.
 
 ## Git workflow (required)
 
