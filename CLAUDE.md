@@ -1,6 +1,8 @@
 # Weather Forecast
 
-A lightweight weather app: search any place on Earth and see current conditions, the next 24 hours and a 5-day forecast. Uses the Dusk theme shared with the home page (see its CLAUDE.md): a soft gradient background, translucent rounded cards, Bricolage Grotesque headings and Inter text, in light and dark. Graph paper is reserved for Paper Arcade.
+A lightweight weather app: search any place on Earth and see current conditions, the next 24 hours and a 5-day forecast. Uses the Dusk theme colours shared with the home page (see its CLAUDE.md): translucent rounded cards, Bricolage Grotesque headings and Inter text, in light and dark. Graph paper is reserved for Paper Arcade.
+
+**Live sky background** (David, 2026-10-31; every project gets its own backdrop): instead of the Dusk gradient, a fixed canvas (`#sky`, the `sky` module near the end of the script) shows the place being viewed. The sky colour follows the sun from that place's local clock and today's sunrise/sunset (night → twilight → golden hour → day → noon, rechecked every minute; polar night stays night, midnight sun stays day), greyed and darkened by the weather kind and cloud cover. On top: the sun or moon glow, clouds drifting with the wind, rain or drizzle slanted by the wind, snow, a fog haze, stars on clear nights (dark mode only) and a soft lightning flash every 7–16 s in thunderstorms. A veil in the page colour keeps text readable and is the only thing the light/dark switch changes (David chose to keep the switch): it is made just thick enough that the sky stays at or above luminance 0.62 in light mode and at or below 0.05 in dark mode, so light mode is pastel and dark mode muted. Before a place loads it shows the viewer's own time of day. Static for reduced motion, paused in background tabs; the parts that only change per minute are baked into an offscreen canvas so each frame is one image plus particles. To preview other conditions, call `sky.set()` from the console with a copy of `data.wx` whose `utc_offset_seconds`, `current.weather_code` or `current.cloud_cover` is changed.
 
 Has the site-wide light/dark switch (top right; see the home page CLAUDE.md). The chart and icons use CSS variables, so they follow the theme without redrawing.
 
@@ -25,7 +27,7 @@ Everything is in `index.html`: no build step, no API keys, no server. All servic
 
 ## Testing locally
 
-Node.js is installed (`C:/Program Files/nodejs`, since 2026-10-31; Python isn't). Use it to serve the folder over http. Check light and dark mode, about 375px width (no sideways scroll), and a few kinds of search: a city, "City, Region", a UK postcode, a landmark, an address, decimal and DMS coordinates, and a nonsense string.
+Node.js is installed (`C:/Program Files/nodejs`, since 2026-10-31; Python isn't). Use it to serve the folder over http. Check light and dark mode (and a few weather kinds and times of day for the sky), about 375px width (no sideways scroll), and a few kinds of search: a city, "City, Region", a UK postcode, a landmark, an address, decimal and DMS coordinates, and a nonsense string.
 
 ## Git workflow (required)
 
